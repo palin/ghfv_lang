@@ -1,0 +1,10 @@
+%header
+  %h1 Favorite programming language
+  %h2 Enter github username
+.container
+  = form_for :user, url: github_api_find_path do |f|
+    = f.text_field :name, required: true
+    = f.submit "Find it!"
+
+- if flash.alert
+  .error= flash.alert
