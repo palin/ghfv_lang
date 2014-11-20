@@ -5,8 +5,7 @@ class GithubApiControllerTest < ActionController::TestCase
     get_find user: { name: 'dhh' }
 
     assert_response :success
-    assert_not_nil assigns(:language)
-    assert_not_nil assigns(:user_name)
+    assert_not_nil assigns(:lf)
   end
 
   test "should redirect to homepage if github error" do

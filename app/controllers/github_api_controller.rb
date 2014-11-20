@@ -3,8 +3,7 @@ class GithubApiController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :error_handler
 
   def find
-    @language = LanguageFinder.new(user_params).favorite
-    @user_name = user_params[:name]
+    @lf = LanguageFinder.new(user_params)
   end
 
   private
