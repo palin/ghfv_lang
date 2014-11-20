@@ -3,9 +3,9 @@
     = image_tag "horse_face.png"
   .content
     .name_date_box
-      .name= @user_name
+      .name= @lf.user_name
       .date 7 days
     .comment_box
       %p
         as much as I want to be, I'm not
-        %span.mentioned @#{@user_name}
+        %span.mentioned @#{@lf.user_name}
